@@ -17,6 +17,8 @@ namespace XamarinFormsPresentations.iOS
 			UINavigationBar.Appearance.TintColor = UIColor.White;
 			UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes() { TextColor = UIColor.White });
 
+			Xamarin.FormsMaps.Init();
+
 			global::Xamarin.Forms.Forms.Init();
 
 			LoadApplication(new App());
