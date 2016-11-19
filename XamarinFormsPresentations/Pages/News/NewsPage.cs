@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 
 namespace XamarinFormsPresentations
-{ 
+{
 	public class NewsPage : BasePage<NewsViewModel>
 	{
 		public NewsPage()
@@ -17,9 +17,9 @@ namespace XamarinFormsPresentations
 
 			var button = new Button
 			{
-				Text="Check Binding"
+				Text = "Check Binding"
 			};
-			button.Clicked+= Button_Clicked;
+			button.Clicked += Button_Clicked;
 
 			var stackLayout = new StackLayout
 			{

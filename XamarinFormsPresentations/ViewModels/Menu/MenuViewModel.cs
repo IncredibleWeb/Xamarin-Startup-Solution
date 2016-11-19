@@ -43,6 +43,14 @@ public class MenuViewModel : BaseViewModel
 
 			menuItems.Add(new MenuItem
 			{
+				Title = "Maps",
+				IconSource = "ic_news",
+				TargetType = typeof(MapPage),
+				ViewModel = new MapViewModel()
+			});
+
+			menuItems.Add(new MenuItem
+			{
 				Title = "Contact Us",
 				IconSource = "ic_contactus",
 				TargetType = typeof(ContactUsPage),
