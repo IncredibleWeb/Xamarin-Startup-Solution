@@ -123,25 +123,34 @@ namespace XamarinFormsPresentations
 				}
 			};
 
-			UserDialogs.Instance.ShowLoading();					
-
-			// Step 1 - Create Person Group
-			personGroupId = Guid.NewGuid().ToString();
-			await faceServiceClient.CreatePersonGroupAsync(personGroupId, "Incredible Web Employees");
-
-			// Step 2 - Add persons (and faces) to person group.
-			foreach (var person in people)
+			try
 			{
-				// Step 2a - Create a new person, identified by their name.
-				var p = await faceServiceClient.CreatePersonAsync(personGroupId, person.FullName);
-				// Step 3a - Add a face for that person.
-				await faceServiceClient.AddPersonFaceAsync(personGroupId, p.PersonId, person.PhotoUrl);
+
+				IsBusy = true;					
+
+				// Step 1 - Create Person Group
+				personGroupId = Guid.NewGuid().ToString();
+				await faceServiceClient.CreatePersonGroupAsync(personGroupId, "Incredible Web Employees");
+
+				// Step 2 - Add persons (and faces) to person group.
+				foreach (var person in people)
+				{
+					// Step 2a - Create a new person, identified by their name.
+					var p = await faceServiceClient.CreatePersonAsync(personGroupId, person.FullName);
+					// Step 3a - Add a face for that person.
+					await faceServiceClient.AddPersonFaceAsync(personGroupId, p.PersonId, person.PhotoUrl);
+				}
+
+				// Step 3 - Train facial recognition model.
+				await faceServiceClient.TrainPersonGroupAsync(personGroupId);
+
+				IsBusy = false;
 			}
-
-			// Step 3 - Train facial recognition model.
-			await faceServiceClient.TrainPersonGroupAsync(personGroupId);
-
-			UserDialogs.Instance.HideLoading();
+			catch (Exception ex)
+			{
+				IsBusy = false;
+				UserDialogs.Instance.ShowError("Training has not finished");
+			}
 		}
 
 		#endregion
