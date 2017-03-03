@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Acr.UserDialogs;
+using System.Reflection;
 
 namespace XamarinFormsPresentations.Droid
 {
@@ -28,6 +29,9 @@ namespace XamarinFormsPresentations.Droid
 
 			//Init User Dialogs
 			UserDialogs.Init(this);
+
+			var cv = typeof(Xamarin.Forms.CarouselView);
+			var assembly = Assembly.Load(cv.FullName);
 
 			LoadApplication(new App());
 		}

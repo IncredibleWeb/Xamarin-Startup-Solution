@@ -59,6 +59,14 @@ public class MenuViewModel : BaseViewModel
 
 			menuItems.Add(new MenuItem
 			{
+				Title = "Gallery",
+				IconSource = "ic_news",
+				TargetType = typeof(GalleryPage),
+				ViewModel = new GalleryViewModel()
+			});
+
+			menuItems.Add(new MenuItem
+			{
 				Title = "Contact Us",
 				IconSource = "ic_contactus",
 				TargetType = typeof(ContactUsPage),
