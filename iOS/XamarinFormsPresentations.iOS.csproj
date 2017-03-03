@@ -107,6 +107,42 @@
     <Reference Include="Xamarin.Forms.Maps.iOS">
       <HintPath>..\packages\Xamarin.Forms.Maps.2.3.2.127\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Media.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Media.2.6.1\lib\Xamarin.iOS10\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\packages\Xam.Plugin.Media.2.6.1\lib\Xamarin.iOS10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.Support.iOS">
+      <HintPath>..\packages\Acr.Support.2.1.0\lib\Xamarin.iOS10\Acr.Support.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\packages\Splat.1.6.2\lib\Xamarin.iOS10\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\packages\Acr.UserDialogs.6.3.1\lib\Xamarin.iOS10\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface">
+      <HintPath>..\packages\Acr.UserDialogs.6.3.1\lib\Xamarin.iOS10\Acr.UserDialogs.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\packages\WebP.Touch.1.0.2\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.5\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.5\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.5\lib\Xamarin.iOS10\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms.Touch">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.5\lib\Xamarin.iOS10\FFImageLoading.Forms.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Transformations">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.2.5\lib\Xamarin.iOS10\FFImageLoading.Transformations.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamarinFormsPresentations\XamarinFormsPresentations.csproj">
