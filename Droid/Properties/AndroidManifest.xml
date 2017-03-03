@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.incredible-web.sample.xamarinformspresentations">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.incredibleweb.sample.xamarinformspresentations">
 	<uses-sdk android:minSdkVersion="15" />
 	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -11,6 +11,8 @@
 	<uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.INTERNET" />
 	<application android:label="XamarinFormsPresentations">
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBAi6EJIbbM_H5kk2Z6YGHZA4bEpc1ct8o" />
 	</application>

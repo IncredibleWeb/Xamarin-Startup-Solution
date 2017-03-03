@@ -43,6 +43,14 @@ public class MenuViewModel : BaseViewModel
 
 			menuItems.Add(new MenuItem
 			{
+				Title = "Face Recognition",
+				IconSource = "ic_news",
+				TargetType = typeof(FacePage),
+				ViewModel = new FaceViewModel()
+			});
+
+			menuItems.Add(new MenuItem
+			{
 				Title = "Maps",
 				IconSource = "ic_news",
 				TargetType = typeof(MapPage),
