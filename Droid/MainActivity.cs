@@ -27,6 +27,8 @@ namespace XamarinFormsPresentations.Droid
 
 			FFImageLoading.Forms.Droid.CachedImageRenderer.Init();
 
+			DLToolkit.Forms.Controls.FlowListView.Init();
+
 			//Init User Dialogs
 			UserDialogs.Init(this);
 
