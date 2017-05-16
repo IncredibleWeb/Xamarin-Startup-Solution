@@ -72,6 +72,14 @@ public class MenuViewModel : BaseViewModel
 				TargetType = typeof(ContactUsPage),
 				ViewModel = new ContactUsViewModel()
 			});
+
+			menuItems.Add(new MenuItem
+			{
+				Title = "Flow ListView",
+				IconSource = "ic_contactus",
+				TargetType = typeof(FlowListViewPage),
+				ViewModel = new FlowListViewModel()
+			});
 		}
 	}
 }

@@ -23,6 +23,8 @@ namespace XamarinFormsPresentations.iOS
 			var cv = typeof(Xamarin.Forms.CarouselView);
 			var assembly = Assembly.Load(cv.FullName);
 
+			DLToolkit.Forms.Controls.FlowListView.Init();
+
 			Xamarin.FormsMaps.Init();
 
 			global::Xamarin.Forms.Forms.Init();
