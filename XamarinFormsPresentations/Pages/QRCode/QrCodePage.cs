@@ -1,27 +1,37 @@
 ﻿using System;
 using ZXing.Net.Mobile.Forms;
 using Xamarin.Forms;
-using ZXing;
 
-namespace XamarinFormsPresentations.Pages.QRCode
+namespace XamarinFormsPresentations
 {
     class QrCodePage : BasePage<HomeViewModel>
     {
         private Entry entry;
-        private Image imgCode;
-
+        private StackLayout stackLayout;
+        private ZXingBarcodeImageView barcode =  new ZXingBarcodeImageView
+        {
+            HorizontalOptions = LayoutOptions.FillAndExpand,
+            VerticalOptions = LayoutOptions.FillAndExpand,
+            AutomationId = "zxingBarcodeImageView",
+        };
         public QrCodePage()
         {
             Title = "Qr Code";
+            
+            barcode.BarcodeFormat = ZXing.BarcodeFormat.QR_CODE;
+            barcode.BarcodeOptions.Width = 300;
+            barcode.BarcodeOptions.Height = 300;
+            barcode.BarcodeOptions.Margin = 10;
+            barcode.BarcodeValue = "ZXing.Net.Mobile";
+            
             var label = new Label
             {
                 Text = "Insert Your code",
                 HorizontalTextAlignment = TextAlignment.Center
             };
-            imgCode = new Image();
+
             entry = new Entry
             {
-                Text = "",
                 Placeholder = "Insert Your code",
                 HorizontalTextAlignment = TextAlignment.Center
             };
@@ -32,15 +42,15 @@ namespace XamarinFormsPresentations.Pages.QRCode
             button.Clicked += Button_Clicked;
             
 
-            var stackLayout = new StackLayout
+             stackLayout = new StackLayout
             {
+
                 Children = {
                     label,
                     entry,
-                    button,
-                    imgCode
+                    button
                 },
-                VerticalOptions = LayoutOptions.Center
+                VerticalOptions = LayoutOptions.FillAndExpand
             };
 
             base.scrollView.Content = stackLayout;
@@ -50,14 +60,23 @@ namespace XamarinFormsPresentations.Pages.QRCode
         {
             try
             {
-                var QRstream = new ZXingBarcodeImageView
+                Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
                 {
-                    BarcodeFormat = BarcodeFormat.QR_CODE,
-                    BarcodeValue = entry.Text.Trim(),
-                    WidthRequest = 200,
-                    HeightRequest = 200
-                };
-                imgCode = QRstream;
+                   barcode= new ZXingBarcodeImageView
+                    {
+                        HorizontalOptions = LayoutOptions.FillAndExpand,
+                        VerticalOptions = LayoutOptions.FillAndExpand,
+                        AutomationId = "zxingBarcodeImageView",
+                        BarcodeFormat = ZXing.BarcodeFormat.QR_CODE,
+                        HeightRequest = 300,
+                        WidthRequest = 300,
+                        Margin = 10,
+                        BarcodeValue = entry.Text
+                    };
+                    //if(stackLayout.Children.Count>=4)
+                    //{ stackLayout.Children.RemoveAt(3); }
+                    stackLayout.Children.Add(barcode);
+                });
             }
             catch (Exception ex)
             {
