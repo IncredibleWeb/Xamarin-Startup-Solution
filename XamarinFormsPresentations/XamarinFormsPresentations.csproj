@@ -30,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Pages\QRCode\QrCodePage.cs" />
+    <Compile Include="Controls\CLabel.cs" />
+    <Compile Include="Pages\Carousel\CarouselPage.cs" />
     <Compile Include="Services\Interfaces\IBrightnessServices.cs" />
+    <Compile Include="ViewModels\Carousel\CarouselViewModel.cs" />
+    <Compile Include="Views\Carousel\CarouselItemView.cs" />
+    <Compile Include="Views\Carousel\CarouselPhotosView.cs" />
     <Compile Include="XamarinFormsPresentations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\MasterPage.cs" />

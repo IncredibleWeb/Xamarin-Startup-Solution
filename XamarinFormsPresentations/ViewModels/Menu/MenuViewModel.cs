@@ -83,10 +83,10 @@ public class MenuViewModel : BaseViewModel
 			});
             menuItems.Add(new MenuItem
             {
-                Title = "QR Code",
+                Title = "Carousel",
                 IconSource = "ic_contactus",
-                TargetType = typeof(QrCodePage),
-                ViewModel = new HomeViewModel()
+                TargetType = typeof(CarouselPage),
+                ViewModel = new CarouselViewModel()
             });
         }
 	}
