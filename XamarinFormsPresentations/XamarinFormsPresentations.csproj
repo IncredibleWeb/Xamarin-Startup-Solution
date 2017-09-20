@@ -33,6 +33,7 @@
     <Compile Include="Controls\Cells\CDiamondLabel.cs" />
     <Compile Include="Controls\Cells\CStarLabel.cs" />
     <Compile Include="Controls\CLabel.cs" />
+    <Compile Include="Helpers\Statics\Theme\Fonts.cs" />
     <Compile Include="Pages\LabelShapes\LabelShapesPage.cs" />
     <Compile Include="Views\LabelShapes\LabelShapesView.cs" />
     <Compile Include="XamarinFormsPresentations.cs" />

@@ -83,7 +83,7 @@ public class MenuViewModel : BaseViewModel
 
             menuItems.Add(new MenuItem
             {
-                Title = "Shape of labels",
+                Title = "Shapes of labels",
                 IconSource = "ic_contactus",
                 TargetType = typeof(LabelShapesPage),
                 ViewModel = new HomeViewModel()

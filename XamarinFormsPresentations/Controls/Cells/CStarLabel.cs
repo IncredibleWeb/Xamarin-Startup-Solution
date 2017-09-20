@@ -47,7 +47,7 @@ namespace XamarinFormsPresentations
         public CStarLabel()
         {
             ShapeType = ShapeType.Star;
-            Color = Color.Red;
+            Color = Color.Yellow;
             BorderColor = Color.Purple;
             HorizontalOptions = LayoutOptions.Center;
             VerticalOptions = LayoutOptions.Center;

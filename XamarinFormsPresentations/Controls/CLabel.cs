@@ -8,7 +8,7 @@ namespace XamarinFormsPresentations
     {
         public CLabel()
         {
-            //FontFamily = FontSizeConverter.FontFamily;
+            FontFamily = Fonts.FontFamily;
             TextColor = Theme.ThemeColor3;
             VerticalTextAlignment = TextAlignment.Center;
         }

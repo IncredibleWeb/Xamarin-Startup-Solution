@@ -47,9 +47,12 @@ namespace XamarinFormsPresentations
         public CCircleLabel()
         {
             ShapeType = ShapeType.Circle;
+            Color = Color.Green;
             HorizontalOptions = LayoutOptions.Center;
             VerticalOptions = LayoutOptions.Center;
             BorderWidth = 0f;
+            HeightRequest = 100;
+            WidthRequest = 100;
             Content = contentText;
         }
         public static implicit operator Label(CCircleLabel ccl)

@@ -47,9 +47,13 @@ namespace XamarinFormsPresentations
         public CBoxLabel()
         {
             ShapeType = ShapeType.Box;
+            Color = Color.Red;
+            BorderColor = Color.Black;
             HorizontalOptions = LayoutOptions.Center;
             VerticalOptions = LayoutOptions.Center;
-            BorderWidth = 0f;
+            BorderWidth = 2f;
+            HeightRequest = 100;
+            WidthRequest = 100;
             Content = contentText;
         }
         public static implicit operator Label(CBoxLabel ccl)

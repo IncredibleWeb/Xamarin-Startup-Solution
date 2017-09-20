@@ -47,9 +47,12 @@ namespace XamarinFormsPresentations
         public CDiamondLabel()
         {
             ShapeType = ShapeType.Diamond;
+            Color = Color.Blue;
             HorizontalOptions = LayoutOptions.Center;
             VerticalOptions = LayoutOptions.Center;
             BorderWidth = 0f;
+            HeightRequest = 100;
+            WidthRequest = 100; ;
             Content = contentText;
         }
         public static implicit operator Label(CDiamondLabel ccl)
