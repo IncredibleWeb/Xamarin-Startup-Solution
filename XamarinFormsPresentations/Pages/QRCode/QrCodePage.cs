@@ -7,6 +7,7 @@ namespace XamarinFormsPresentations
     class QrCodePage : BasePage<HomeViewModel>
     {
         private Entry entry;
+        private Button button;
         private StackLayout stackLayout;
         private ZXingBarcodeImageView barcode =  new ZXingBarcodeImageView
         {
@@ -26,16 +27,16 @@ namespace XamarinFormsPresentations
             
             var label = new Label
             {
-                Text = "Insert Your code",
+                Text = "QR Code Generator",
                 HorizontalTextAlignment = TextAlignment.Center
             };
 
             entry = new Entry
             {
-                Placeholder = "Insert Your code",
+                Placeholder = "Insert Your code here",
                 HorizontalTextAlignment = TextAlignment.Center
             };
-            var button = new Button
+            button = new Button
             {
                 Text = "Generate",
             };
@@ -73,8 +74,7 @@ namespace XamarinFormsPresentations
                         Margin = 10,
                         BarcodeValue = entry.Text
                     };
-                    //if(stackLayout.Children.Count>=4)
-                    //{ stackLayout.Children.RemoveAt(3); }
+                    stackLayout.Children.Clear();
                     stackLayout.Children.Add(barcode);
                 });
             }
@@ -85,9 +85,19 @@ namespace XamarinFormsPresentations
             }
 
         }
+        private readonly IBrightnessServices brightnessServices = DependencyService.Get<IBrightnessServices>();
+        float screenBrightnessValue;
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            screenBrightnessValue = brightnessServices.SetBrightness(1);
+
+        }
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            //brightnessServices.SetBrightness(-1);
+            brightnessServices.SetBrightness(screenBrightnessValue);
         }
     }
 }
