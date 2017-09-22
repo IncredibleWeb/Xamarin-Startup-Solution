@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XamarinFormsPresentations
 {
-    public class LabelShapesPage : BasePage<HomeViewModel>
+	public class LabelShapesPage : BasePage<LabelShapesViewModel>
     {
         public LabelShapesPage()
         {

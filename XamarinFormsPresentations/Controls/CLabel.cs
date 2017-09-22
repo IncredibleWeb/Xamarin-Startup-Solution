@@ -18,9 +18,5 @@ namespace XamarinFormsPresentations
             Text = text;
             FontSize = fontsize;
         }
-
-
-
-
     }
 }

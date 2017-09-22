@@ -7,48 +7,52 @@ using Xamarin.Forms;
 
 namespace XamarinFormsPresentations
 {
-    public class LabelShapesView : ModelBoundContentView<HomeViewModel>
-    {
-        CStarLabel star;
-        CDiamondLabel diamond;
-        CCircleLabel circle;
-        CBoxLabel box;
-         public LabelShapesView()
-        {
-            star = new CStarLabel
-            {
-                Text = "Star",
-                FontSize = 8
-            };
-            circle = new CCircleLabel
-            {
-                Text = "Circle",
-                FontSize = 8
-            };
-            diamond = new CDiamondLabel
-            {
-                Text = "Diamond",
-                FontSize = 8
-            };
-            box = new CBoxLabel
-            {
-                Text = "Box",
-                FontSize = 8
-            };
+	public class LabelShapesView : ModelBoundContentView<LabelShapesViewModel>
+	{
+		private CStarLabel starLabel;
+		private CDiamondLabel diamondLabel;
+		private CCircleLabel circleLabel;
+		private CBoxLabel boxLabel;
 
-            var stackLayout = new StackLayout
-            {
-                Children =
-                {
-                    star,
-                    circle,
-                    diamond,
-                    box
-                },
-                VerticalOptions = LayoutOptions.Center
-            };
+		public LabelShapesView()
+		{
+			starLabel = new CStarLabel
+			{
+				Text = "Star",
+				FontSize = 8
+			};
 
-            Content = stackLayout;
-        }
-    }
+			circleLabel = new CCircleLabel
+			{
+				Text = "Circle",
+				FontSize = 8
+			};
+
+			diamondLabel = new CDiamondLabel
+			{
+				Text = "Diamond",
+				FontSize = 8
+			};
+
+			boxLabel = new CBoxLabel
+			{
+				Text = "Box",
+				FontSize = 8
+			};
+
+			var stackLayout = new StackLayout
+			{
+				Children =
+				{
+					starLabel,
+					circleLabel,
+					diamondLabel,
+					boxLabel
+				},
+				VerticalOptions = LayoutOptions.Center
+			};
+
+			Content = stackLayout;
+		}
+	}
 }
