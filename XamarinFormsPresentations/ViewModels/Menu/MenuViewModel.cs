@@ -80,6 +80,14 @@ public class MenuViewModel : BaseViewModel
 				TargetType = typeof(FlowListViewPage),
 				ViewModel = new FlowListViewModel()
 			});
-		}
+
+            menuItems.Add(new MenuItem
+            {
+                Title = "Shapes of Labels",
+                IconSource = "ic_contactus",
+                TargetType = typeof(LabelShapesPage),
+				ViewModel = new BaseViewModel()
+            });
+        }
 	}
 }
