@@ -163,7 +163,7 @@ namespace XamarinFormsPresentations
             {
                 arrowRightImage.IsVisible = true;
             }
-            positionLabel.Text = (carouselPhotos.Position + 1).ToString();
+            positionLabel.Text = (carouselPhotos.Position + 1).ToString()+ " of " +(size).ToString();
             
         }
         
