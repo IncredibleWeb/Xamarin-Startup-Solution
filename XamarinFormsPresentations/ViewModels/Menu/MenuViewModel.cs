@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using XamarinFormsPresentations;
 
 namespace XamarinFormsPresentations
 {
@@ -80,6 +81,14 @@ public class MenuViewModel : BaseViewModel
 				TargetType = typeof(FlowListViewPage),
 				ViewModel = new FlowListViewModel()
 			});
-		}
+            menuItems.Add(new MenuItem
+            {
+                Title = "Carousel",
+                IconSource = "ic_contactus",
+                TargetType = typeof(CarouselPage),
+                ViewModel = new CarouselViewModel()
+                //ViewModel = new HomeViewModel()
+            });
+        }
 	}
 }
