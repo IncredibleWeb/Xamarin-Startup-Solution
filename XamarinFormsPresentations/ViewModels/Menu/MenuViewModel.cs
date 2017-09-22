@@ -87,6 +87,7 @@ public class MenuViewModel : BaseViewModel
                 IconSource = "ic_contactus",
                 TargetType = typeof(CarouselPage),
                 ViewModel = new CarouselViewModel()
+                //ViewModel = new HomeViewModel()
             });
         }
 	}

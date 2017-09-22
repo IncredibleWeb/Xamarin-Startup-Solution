@@ -3,20 +3,13 @@ using Xamarin.Forms;
 
 namespace XamarinFormsPresentations
 {
-    public class CarouselPage : BasePage<CarouselViewModel>
+    public class CarouselPage : BasePage<MenuViewModel>
     {
         public CarouselPage()
         {
             Title = "Incredible-web photogallery";
-            var stackLayout = new StackLayout
-            {
-                Children ={
-                    new CarouselPhotosView()
-        },
-                VerticalOptions = LayoutOptions.StartAndExpand
-            };
 
-            base.scrollView.Content = stackLayout;
+            base.scrollView.Content = new PhotosView();
 
         }
     }

@@ -33,6 +33,7 @@ namespace XamarinFormsPresentations
                 "https://www.incredible-web.com/media/1093/web-summit.png",
                 "https://www.incredible-web.com/media/1104/screen-shot-2016-05-03-at-65717-pm.png"
             };
+            
         }
     }
 }

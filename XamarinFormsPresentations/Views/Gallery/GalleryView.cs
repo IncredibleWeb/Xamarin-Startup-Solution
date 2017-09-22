@@ -1,9 +1,10 @@
-﻿using System;
+﻿using CarouselView.FormsPlugin.Abstractions;
+using System;
 using Xamarin.Forms;
 
 namespace XamarinFormsPresentations
 {
-	public class GalleryView : CarouselView
+	public class GalleryView : CarouselViewControl
 	{
 		public GalleryView()
 		{

@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace XamarinFormsPresentations
 {
-    public class CarouselItemView : ContentView
+    public class CarouselItemView : ModelBoundContentView<CarouselViewModel>
     {
         public CarouselItemView()
         {
@@ -12,12 +12,18 @@ namespace XamarinFormsPresentations
             {
                 Aspect = Aspect.AspectFill,
                 DownsampleToViewSize = true,
-                //HeightRequest = 500,
+                HeightRequest = 250,
+                WidthRequest = 500,
                 HorizontalOptions = LayoutOptions.Center
             };
             cachedImage.SetBinding(CachedImage.SourceProperty, ".");
 
             Content = cachedImage;
+        }
+
+        public static implicit operator CarouselItemView(CarouselPhotosView v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
