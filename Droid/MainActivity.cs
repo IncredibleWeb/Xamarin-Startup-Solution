@@ -1,14 +1,11 @@
 ﻿using System;
 using Android.App;
-using Android.Content;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 using Acr.UserDialogs;
 using System.Reflection;
 using Plugin.Permissions;
+using XFShapeView.Droid;
 
 namespace XamarinFormsPresentations.Droid
 {

@@ -1,6 +1,5 @@
 ﻿using System;
 using UIKit;
-using XamarinFormsPresentations.Services.Interfaces;
 using XamarinFormsPresentations.iOS;
 
 [assembly: Xamarin.Forms.Dependency(typeof(BrightnessServices))]

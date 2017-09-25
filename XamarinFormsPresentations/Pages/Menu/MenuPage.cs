@@ -12,7 +12,7 @@ namespace XamarinFormsPresentations
 		{
 			Title = "Xamarin";
 
-			#region product list
+			#region Menu list
 			MenuListView = new MenuListView();
 			MenuListView.SetBinding(MenuListView.ItemsSourceProperty, "MenuItems");
 

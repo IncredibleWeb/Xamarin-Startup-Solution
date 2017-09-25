@@ -1,6 +1,5 @@
 ﻿using System;
 using Android.App;
-using XamarinFormsPresentations.Services.Interfaces;
 using XamarinFormsPresentations.Droid;
 using Xamarin.Forms;
 

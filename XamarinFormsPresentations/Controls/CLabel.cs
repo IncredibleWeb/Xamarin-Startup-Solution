@@ -1,4 +1,5 @@
 ﻿using System;
+
 using Xamarin.Forms;
 
 namespace XamarinFormsPresentations
@@ -7,7 +8,8 @@ namespace XamarinFormsPresentations
     {
         public CLabel()
         {
-            TextColor = Color.Gray;
+            FontFamily = Fonts.FontFamily;
+            TextColor = Theme.ThemeColor3;
             VerticalTextAlignment = TextAlignment.Center;
         }
         public CLabel(string text, Color color, int fontsize)
