@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using XamarinFormsPresentations;
 
 namespace XamarinFormsPresentations
 {
@@ -87,6 +88,14 @@ public class MenuViewModel : BaseViewModel
                 IconSource = "ic_contactus",
                 TargetType = typeof(LabelShapesPage),
 				ViewModel = new BaseViewModel()
+            });
+
+            menuItems.Add(new MenuItem
+            {
+                Title = "QR Code",
+                IconSource = "ic_contactus",
+                TargetType = typeof(QrCodePage),
+                ViewModel = new QrCodeViewModel()
             });
         }
 	}
