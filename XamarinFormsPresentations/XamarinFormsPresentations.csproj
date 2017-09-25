@@ -32,6 +32,8 @@
   <ItemGroup>
     <Compile Include="Pages\QRCode\QrCodePage.cs" />
     <Compile Include="Services\Interfaces\IBrightnessServices.cs" />
+    <Compile Include="ViewModels\QRCode\QrCodeViewModel.cs" />
+    <Compile Include="Views\QRCode\QrCodeView.cs" />
     <Compile Include="XamarinFormsPresentations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\MasterPage.cs" />

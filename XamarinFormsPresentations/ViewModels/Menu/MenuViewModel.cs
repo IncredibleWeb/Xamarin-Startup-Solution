@@ -81,12 +81,13 @@ public class MenuViewModel : BaseViewModel
 				TargetType = typeof(FlowListViewPage),
 				ViewModel = new FlowListViewModel()
 			});
+
             menuItems.Add(new MenuItem
             {
                 Title = "QR Code",
                 IconSource = "ic_contactus",
                 TargetType = typeof(QrCodePage),
-                ViewModel = new HomeViewModel()
+                ViewModel = new QrCodeViewModel()
             });
         }
 	}
