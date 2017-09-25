@@ -8,7 +8,7 @@ namespace XamarinFormsPresentations
 {
     class QrCodeViewModel : BaseViewModel
     {
-        private string qrCodeValue;
+        private string qrCodeValue = "abcd";
 
         public string QrCodeValue
         {
@@ -16,7 +16,10 @@ namespace XamarinFormsPresentations
             set
             {
                 qrCodeValue = value;
-                OnPropertyChanged("QrCodeValue");
+                if (qrCodeValue.Length >= 1)
+                {
+                    OnPropertyChanged("QrCodeValue");
+                }
             }
         }
     }

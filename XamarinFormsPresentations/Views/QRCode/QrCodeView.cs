@@ -7,7 +7,6 @@ namespace XamarinFormsPresentations
     class QrCodeView : ModelBoundContentView<QrCodeViewModel>
     {
         private Entry entry;
-        private Button qrGeneratorButton;
         private StackLayout stackLayout;
         private ZXingBarcodeImageView barcodeImageView = new ZXingBarcodeImageView
         {
@@ -21,7 +20,7 @@ namespace XamarinFormsPresentations
             barcodeImageView.BarcodeOptions.Width = 300;
             barcodeImageView.BarcodeOptions.Height = 300;
             barcodeImageView.BarcodeOptions.Margin = 10;
-            barcodeImageView.BarcodeValue = "ZXing.Net.Mobile";            
+            barcodeImageView.BarcodeValue = "ZXing.Net.Mobile";
 
             #region label
             var label = new Label
@@ -37,61 +36,35 @@ namespace XamarinFormsPresentations
             {
                 Placeholder = "Insert Your code here",
                 HorizontalTextAlignment = TextAlignment.Center
-            };
-            #endregion
+            };            
             entry.SetBinding(Entry.TextProperty, "QrCodeValue");
+            #endregion          
 
-            #region qr generator button
-            qrGeneratorButton = new Button
+            #region barcode ImageView
+            barcodeImageView = new ZXingBarcodeImageView
             {
-                Text = "Generate",
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                AutomationId = "zxingBarcodeImageView",
+                BarcodeFormat = ZXing.BarcodeFormat.QR_CODE,
+                HeightRequest = 300,
+                WidthRequest = 300,
+                Margin = 10                
             };
+            barcodeImageView.SetBinding(ZXingBarcodeImageView.BarcodeValueProperty, "QrCodeValue");
             #endregion
-            qrGeneratorButton.Clicked += Button_Clicked;
 
             stackLayout = new StackLayout
             {
-
                 Children = {
                     label,
                     entry,
-                    qrGeneratorButton
+                    barcodeImageView                    
                 },
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
 
             Content = stackLayout;
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
-                {
-                    barcodeImageView = new ZXingBarcodeImageView
-                    {
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        VerticalOptions = LayoutOptions.FillAndExpand,
-                        AutomationId = "zxingBarcodeImageView",
-                        BarcodeFormat = ZXing.BarcodeFormat.QR_CODE,
-                        HeightRequest = 300,
-                        WidthRequest = 300,
-                        Margin = 10,
-                        BarcodeValue = entry.Text
-                    };
-
-                    barcodeImageView.SetBinding(ZXingBarcodeImageView.BarcodeValueProperty,"QrCodeValue");
-
-                    stackLayout.Children.Clear();
-                    stackLayout.Children.Add(barcodeImageView);
-                });
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex.ToString());
-                App.MasterPage.DisplayAlert("Alert", "Enter value that want to be carried in the QR Code", "OK");
-            }
         }
     }
 }
