@@ -9,7 +9,7 @@ namespace XamarinFormsPresentations
         private Entry entry;
         private Button qrGeneratorButton;
         private StackLayout stackLayout;
-        private ZXingBarcodeImageView barcode = new ZXingBarcodeImageView
+        private ZXingBarcodeImageView barcodeImageView = new ZXingBarcodeImageView
         {
             HorizontalOptions = LayoutOptions.FillAndExpand,
             VerticalOptions = LayoutOptions.FillAndExpand,
@@ -17,11 +17,12 @@ namespace XamarinFormsPresentations
         };
         public QrCodeView()
         {
-            barcode.BarcodeFormat = ZXing.BarcodeFormat.QR_CODE;
-            barcode.BarcodeOptions.Width = 300;
-            barcode.BarcodeOptions.Height = 300;
-            barcode.BarcodeOptions.Margin = 10;
-            barcode.BarcodeValue = "ZXing.Net.Mobile";
+            barcodeImageView.BarcodeFormat = ZXing.BarcodeFormat.QR_CODE;
+            barcodeImageView.BarcodeOptions.Width = 300;
+            barcodeImageView.BarcodeOptions.Height = 300;
+            barcodeImageView.BarcodeOptions.Margin = 10;
+            barcodeImageView.BarcodeValue = "ZXing.Net.Mobile";            
+
             #region label
             var label = new Label
             {
@@ -67,7 +68,7 @@ namespace XamarinFormsPresentations
             {
                 Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
                 {
-                    barcode = new ZXingBarcodeImageView
+                    barcodeImageView = new ZXingBarcodeImageView
                     {
                         HorizontalOptions = LayoutOptions.FillAndExpand,
                         VerticalOptions = LayoutOptions.FillAndExpand,
@@ -80,13 +81,12 @@ namespace XamarinFormsPresentations
                     };
                  
                     stackLayout.Children.Clear();
-                    stackLayout.Children.Add(barcode);
+                    stackLayout.Children.Add(barcodeImageView);
                 });
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
-                //System.Diagnostics.Debug.WriteLine("Enter value that want to be carried in the QR Code");
                 App.MasterPage.DisplayAlert("Alert", "Enter value that want to be carried in the QR Code", "OK");
             }
         }

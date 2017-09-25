@@ -24,7 +24,6 @@ namespace XamarinFormsPresentations
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            //brightnessServices.SetBrightness(-1);
             brightnessServices.SetBrightness(screenBrightnessValue);
         }
         
