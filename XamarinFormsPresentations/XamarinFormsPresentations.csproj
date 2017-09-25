@@ -32,6 +32,7 @@
   <ItemGroup>
     <Compile Include="Controls\CLabel.cs" />
     <Compile Include="Helpers\Statics\Theme\Fonts.cs" />
+    <Compile Include="Pages\Carousel\CarouselPage.cs" />
     <Compile Include="Pages\LabelShapes\LabelShapesPage.cs" />
     <Compile Include="Views\LabelShapes\LabelShapesView.cs" />
     <Compile Include="Pages\QRCode\QrCodePage.cs" />
@@ -90,11 +91,9 @@
     <Compile Include="ViewModels\LabelShapes\LabelShapesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
     <Folder Include="Views\ContactUs\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\News\" />
-    <Folder Include="ViewModels\LabelShapes\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Examples\SliderTransformPage.xaml">
@@ -162,7 +161,7 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-	<Reference Include="ZXing.Net.Mobile.Core, Version=2.2.9.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="ZXing.Net.Mobile.Core, Version=2.2.9.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ZXing.Net.Mobile.2.2.9\lib\portable-net45+netcore45+wpa81+wp8\ZXing.Net.Mobile.Core.dll</HintPath>
     </Reference>
     <Reference Include="ZXing.Net.Mobile.Forms, Version=2.2.9.0, Culture=neutral, processorArchitecture=MSIL">
