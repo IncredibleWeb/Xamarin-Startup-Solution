@@ -10,7 +10,6 @@ namespace XamarinFormsPresentations
             Title = "Incredible-web photogallery";
 
             base.scrollView.Content = new PhotosView();
-
         }
     }
 }

@@ -7,17 +7,17 @@ namespace XamarinFormsPresentations
 {
     public class PhotosView : ModelBoundContentView<HomeViewModel>
     {
-        CarouselPhotosView carouselPhotos;
-        CarouselViewModel carouselViewModel;
-        CachedImage arrowLeftImage, arrowRightImage;
-        CLabel label, positionLabel, photoCountLabel;
-        int size;
+        private CarouselPhotosView carouselPhotos;
+        private CarouselViewModel carouselViewModel;
+        private CachedImage arrowLeftImage, arrowRightImage;
+        private CLabel label, positionLabel, photoCountLabel;
+        private int imageUrlsListSize;
 
         public PhotosView()
         {
             carouselPhotos = new CarouselPhotosView();
             carouselViewModel= new CarouselViewModel();
-            size = carouselViewModel.ImageUrls.GetCount();
+            imageUrlsListSize = carouselViewModel.ImageUrls.GetCount();
             carouselPhotos.PropertyChanged += carouselPhotosProperty_PropertyChanged;
             label = new CLabel()
             {
@@ -59,10 +59,9 @@ namespace XamarinFormsPresentations
                 Children = {
                     positionLabel,
                     photoCountLabel,
-                    
+
                 }
             };
-            
 
             arrowLeftImage = new CachedImage
             {
@@ -102,7 +101,6 @@ namespace XamarinFormsPresentations
             arrowLeftImage.GestureRecognizers.Add(tapGestureRecognizer);
             arrowRightImage.GestureRecognizers.Add(tapGestureRecognizer);
 
-
             var arrowsGridLayout = new Grid
             {
                 Margin = 0,
@@ -139,10 +137,8 @@ namespace XamarinFormsPresentations
                 
                 }
             };
-            Content = contentStackLayout;
-            
+            Content = contentStackLayout; 
         }
-        
         
         void carouselPhotosProperty_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
@@ -155,7 +151,7 @@ namespace XamarinFormsPresentations
             {
                 arrowLeftImage.IsVisible = true;
             }
-            if (carouselPhotos.Position == size - 1)
+            if (carouselPhotos.Position == imageUrlsListSize - 1)
             {
                 arrowRightImage.IsVisible = false;
             }
@@ -163,11 +159,9 @@ namespace XamarinFormsPresentations
             {
                 arrowRightImage.IsVisible = true;
             }
-            positionLabel.Text = (carouselPhotos.Position + 1).ToString()+ " of " +(size).ToString();
+            positionLabel.Text = (carouselPhotos.Position + 1).ToString()+ " of " +(imageUrlsListSize).ToString();
             
         }
-        
-
     }
 }
 

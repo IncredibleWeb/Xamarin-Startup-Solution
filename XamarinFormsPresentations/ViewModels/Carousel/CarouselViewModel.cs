@@ -8,7 +8,7 @@ namespace XamarinFormsPresentations
 {
     public class CarouselViewModel : BaseViewModel
     {
-        List<string> imageUrls;
+        private List<string> imageUrls;
 
         public List<string> ImageUrls
         {
@@ -32,8 +32,7 @@ namespace XamarinFormsPresentations
                 "https://www.incredible-web.com/media/1090/css-design-awards.jpg",
                 "https://www.incredible-web.com/media/1093/web-summit.png",
                 "https://www.incredible-web.com/media/1104/screen-shot-2016-05-03-at-65717-pm.png"
-            };
-            
+            };  
         }
     }
 }

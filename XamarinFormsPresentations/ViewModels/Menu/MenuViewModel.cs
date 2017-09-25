@@ -81,13 +81,13 @@ public class MenuViewModel : BaseViewModel
 				TargetType = typeof(FlowListViewPage),
 				ViewModel = new FlowListViewModel()
 			});
+
             menuItems.Add(new MenuItem
             {
                 Title = "Carousel",
                 IconSource = "ic_contactus",
                 TargetType = typeof(CarouselPage),
                 ViewModel = new CarouselViewModel()
-                //ViewModel = new HomeViewModel()
             });
         }
 	}

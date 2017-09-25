@@ -15,7 +15,6 @@ namespace XamarinFormsPresentations
             ItemTemplate = new DataTemplate(typeof(CarouselItemView));
 			HeightRequest = 220;
             WidthRequest = 500;
-            //VerticalOptions = LayoutOptions.FillAndExpand;
             Orientation = CarouselViewOrientation.Horizontal;
 			InterPageSpacing = 20;
 			Position = 0;
