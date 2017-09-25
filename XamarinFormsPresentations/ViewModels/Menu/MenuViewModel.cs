@@ -97,6 +97,15 @@ public class MenuViewModel : BaseViewModel
                 TargetType = typeof(QrCodePage),
                 ViewModel = new QrCodeViewModel()
             });
+
+            menuItems.Add(new MenuItem
+            {
+                Title = "Carousel",
+                IconSource = "ic_contactus",
+                TargetType = typeof(CarouselPage),
+                ViewModel = new CarouselViewModel()
+            });
+
         }
 	}
 }
