@@ -39,6 +39,7 @@ namespace XamarinFormsPresentations
                 HorizontalTextAlignment = TextAlignment.Center
             };
             #endregion
+            entry.SetBinding(Entry.TextProperty, "QrCodeValue");
 
             #region qr generator button
             qrGeneratorButton = new Button
@@ -79,7 +80,9 @@ namespace XamarinFormsPresentations
                         Margin = 10,
                         BarcodeValue = entry.Text
                     };
-                 
+
+                    barcodeImageView.SetBinding(ZXingBarcodeImageView.BarcodeValueProperty,"QrCodeValue");
+
                     stackLayout.Children.Clear();
                     stackLayout.Children.Add(barcodeImageView);
                 });
